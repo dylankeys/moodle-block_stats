@@ -15,20 +15,31 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Newblock block caps.
+ * Stats block renderer
  *
  * @package    block_stats
  * @copyright  Dylan Keys <dylankeys@icloud.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die();
+class block_stats_renderer extends plugin_renderer_base {
 
-$settings->add(new admin_setting_heading('sampleheader',
-                                         get_string('headerconfig', 'block_stats'),
-                                         get_string('descconfig', 'block_stats')));
+    function fetch_block_content($blockid, $courseid) {
 
-$settings->add(new admin_setting_configcheckbox('newblock/foo',
-                                                get_string('labelfoo', 'block_stats'),
-                                                get_string('descfoo', 'block_stats'),
-                                                '0'));
+        global $DB, $CFG;
+
+        $data = new stdClass();
+
+        // Get total number of records from the user table
+        $usercount = $DB->count_records('user');
+
+        // Take away one from this total to account for the guest user
+        $usercount = $usercount - 1;
+
+        // Build data object for output to the template
+        $data->usercount = $usercount;
+
+        // Render the data in a Mustache template and return to the block
+        return $this->render_from_template('block_stats/block_content', $data);
+    }
+}

@@ -17,8 +17,8 @@
 /**
  * Newblock block caps.
  *
- * @package   block_newblock
- * @copyright Daniel Neis <danielneis@gmail.com>
+ * @package   block_stats
+ * @copyright Dylan Keys <dylankeys@icloud.com>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 

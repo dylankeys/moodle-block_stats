@@ -16,10 +16,10 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'block_newblock', language 'en'
+ * Strings for component 'block_stats', language 'en'
  *
- * @package   block_newblock
- * @copyright Daniel Neis <danielneis@gmail.com>
+ * @package   block_stats
+ * @copyright Dylan Keys <dylankeys@icloud.com>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -28,6 +28,6 @@ $string['descconfig'] = 'Description of the config section';
 $string['descfoo'] = 'Config description';
 $string['headerconfig'] = 'Config section header';
 $string['labelfoo'] = 'Config label';
-$string['newblock:addinstance'] = 'Add a newblock block';
-$string['newblock:myaddinstance'] = 'Add a newblock block to my moodle';
-$string['pluginname'] = 'Newblock';
+$string['newblock:addinstance'] = 'Add a stats block';
+$string['newblock:myaddinstance'] = 'Add a stats block';
+$string['pluginname'] = 'Statistics';
